@@ -1,5 +1,5 @@
 # internship-management-system
-Creating Internship Management System for final group project
+Designing Internship Management System for final group project.
 
 ![Screenshot (1278)](https://github.com/mirulfiq1/internship-management-system/assets/149250526/f40cabcc-78ab-44ba-bb13-dbd77bf8d290)
 
