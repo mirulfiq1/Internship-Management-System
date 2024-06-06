@@ -86,14 +86,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if the file is a valid type
     if (in_array($fileType, array("pdf", "doc", "docx"))) {
         // Move the uploaded file to the specified directory
-        move_uploaded_file($_FILES["cvFile"]["name"], $targetFilePath);
+        move_uploaded_file($_FILES["cvFile"]["tmp_name"],  $targetFilePath);
 
         // Insert the application into the database
         $stmt = $conn->prepare("INSERT INTO jobapplications (studentname, jobID, CVfile, status) VALUES (?, ?, ?,?)");
         $stmt->bind_param("ssss", $studentName, $jobID, $cvFileName, $status); // Fix the bind_param parameters
         $stmt->execute();
 
-        echo "Application submitted successfully!";
+        echo "The file " . basename($_FILES["cvFile"]["name"]) . " submitted successfully!";
     } else {
         echo "Invalid file type. Please upload a PDF, DOC, or DOCX file.";
     }

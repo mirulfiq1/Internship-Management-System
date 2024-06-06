@@ -86,7 +86,7 @@ if($query){
                     <td>$cnt</td>
                     <td>{$row['studentname']}</td>
                     <td>{$datetime1->format('Y/m/d')}</td>
-                    <td><a href='path/to/files/" . htmlspecialchars($row['CVfile']) . "' download='" . htmlspecialchars($row['CVfile']) . "'>" . htmlspecialchars($row['CVfile']) . "</a></td>                                 
+                    <td><a href='uploads/" . htmlspecialchars($row['CVfile']) . "' download='" . htmlspecialchars($row['CVfile']) . "'>" . htmlspecialchars($row['CVfile']) . "</a></td>                                 
                     <td><a href=\"updateStatusAccept.php?applicationID={$row['applicationID']}&CVfile={$row['CVfile']}\"><button class='btn-success btn-sm' >Accept</button></a>
                     <a href=\"updateStatusReject.php?applicationID={$row['applicationID']}&CVfile={$row['CVfile']}\"><button class='btn-danger btn-sm' >Reject</button></a></td>
                   </tr>";  
